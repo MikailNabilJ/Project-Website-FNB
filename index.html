@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Kingzza22</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="./assets/js/page.js"></script>
+    <link rel="icon" href="./assets/icon/Kingzza22.png">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <!--        main section here       -->
+    <!--            1st fold        -->
+    <div class="section"    id="firstSec">
+        <div class="Home1_frame"></div>
+        <div id="firstFold_right">
+            <div class="firstFoldR_Content">
+                <div class="headings11">
+                    <p>Welcome to Kingzza22, foodie!</p>
+                </div>
+                <div id="description">
+                    <p>Inside our culinary palace, we invite you to explore the incredible world of fast food for example like piiza. From overflowing cheese blends to enticing spice touches,every dish is a feast for your palate. Kingzza22 not only offers exceptional pizza,<br>but also serves other exquisite menus meticulously crafted by our talented chefs
+                    <br><span class="staysafe">Stay Safe, Stay Connected!</span></p>
+                </div>
+                <div id="socmed_btn">
+                    <ul id="socmedList">
+                        <li><a href="https://github.com/orgs/Kampus-Merdeka-Software-Engineering/teams/section-jakarta-group-22/repositories"><img src="./assets/icon/Github.png" id="IconghMain" alt="ig_icon"></a></li>
+                        <li><a href="#"><img src="./assets/icon/email.png" id="IconmlMain" alt="fb_icon"></a> </li> 
+                        <li><a href="https://twitter.com/"><img src="./assets/icon/twitter.png" id="IconTwMain" alt="tw_icon"></a></li>
+                    </ul>
+                </div>
+                <div id="small_images">
+                    <img src="./assets/menu/Burger.png" alt="Burger">
+                    <img src="./assets/menu/cola.png" alt="Cola">
+                    <img src="./assets/menu/taco.png" alt="Taco">
+                </div>  
+            </div>
+            <br>
+            <div id="anchordown_1st">
+                <p>Read More</p>
+                <a href="#anchorSect2" title="Double down arrow"><img src="./assets/icon/icons8-double-down-24.png" alt="ig_icon" aria-hidden="true"></a>
+            </div>
+        </div>
+    </div>
+
+    <!--            2nd fold        -->
+    <div class="section" id="secondSec">
+        <a id=anchorSect2></a>
+        <div id="secondSec_Left">
+            <div class="decotext">
+                <div class="headings1">
+                    <p>Don't miss a single thread</p> 
+                </div>
+                <div id="secondSecL_text1">
+                    <p>Stay updated to our latest activities such as</p>
+                </div>
+                <div id="secondSecL_text2">
+                    <p><span id="worthyF">worthy <i><strong class="underline-animate">fundraising,</strong></i></span><br>great <strong><span class="underline-animate">Promotion,</span></strong><br><sup>& exciting</sup> <strong class="underline-animate">events<i>!</i></strong> </p>
+                </div>
+                <div>
+                    <button class="newsL" id="readnewsBtn"> <a href="./page/news.html">Read News</a></button>
+                </div>
+            </div>
+            <div id="boxarrow2">
+                <a href="#anchorSect3" title="Double down arrow"><img src="./assets/icon/icons8-double-down-48.png" alt="ig_icon" aria-hidden="true"></a>
+            </div>
+        </div>
+        <div id="videoframe">
+            <video autoplay loop class="Vlan">
+                <source src="./assets/video/1110.mp4"> 
+            </video>
+        </div>
+    </div>
+
+    <!--            3rd fold        -->
+    <div class="section" id="thirdSec">
+        <a id=anchorSect3></a>
+        <div id="thirdSecL">
+            <div class="decotext" id="thirdSecL_Content">
+                <div class="headings1" id="thirdHeadings">
+                    <h1 class="ml11">
+                        <span class="text-wrapper">
+                          <span class="line line1"></span>
+                          <span class="letters">Kingzza22</span>
+                        </span>
+                    </h1>
+                    <script>
+                        var textWrapper = document.querySelector('.ml11 .letters');
+                        textWrapper.innerHTML = textWrapper.textContent.replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>");
+                        anime.timeline({loop: true})
+                        .add({
+                            targets: '.ml11 .line',
+                            scaleY: [0,1],
+                            opacity: [0.5,1],
+                            easing: "easeOutExpo",
+                            duration: 700
+                        })
+                        .add({
+                            targets: '.ml11 .line',
+                            translateX: [0, document.querySelector('.ml11 .letters').getBoundingClientRect().width + 100],
+                            easing: "easeOutExpo",
+                            duration: 700,
+                            delay: 100
+                        }).add({
+                            targets: '.ml11 .letter',
+                            opacity: [0,1],
+                            easing: "easeOutExpo",
+                            duration: 600, 
+                            offset: '-=775',
+                            delay: (el, i) => 34 * (i+1) 
+                        }).add({
+                            targets: '.ml11',
+                            opacity: 0,
+                            duration: 1000,
+                            easing: "easeOutExpo",
+                            delay: 1000
+                        });
+                    </script>
+                    <!--<p>Coffee makes it possible,<br>Dessert makes it worth it!</p> -->
+                </div>
+                <div id="thirdSecL_text1">
+                    <p>Our fast food aficionados have condensed their years of flavor exploration<br>into three straightforward questions to guide you<br> in discovering a meal you're bound to relish.</p>
+                </div>
+                <div id="thirdSecL_text2">
+                    <p>Indulge in delectable <strong> desserts and the rich</strong>  nutty aroma<br><strong>of our signature coffee beans. Satisfy your cravings in a flash at our fast food haven.</strong></p>
+                </div>
+                <div>
+                    <button class="basicbtn" id="browsemenuBtn">Browse Our Menu</button>
+                </div>
+            </div>
+        </div>
+        <div id="thirdSecR">
+            <img src="./assets/menu/icetea.png" alt="handpic" id="handpng">
+        </div>
+    </div>
+    <div id="endSec"></div>  <!--additional section for spacing before footer -->
+    
+    <!--promo section-->
+    <div class="promotion">
+        <div class="promo-content">
+          <div class="close" onclick="return closePromo()">
+            +
+        </div>
+        <div class="promo-img">
+        </div>
+            <div class="promo-text">
+                <div class="promo-title">
+                    <h1 id="main-text"> THE ULTIMATE</h1>
+                    <h1 id="promo-details1">DISCOUNT 80% -> 100.00</h1>
+                </div>
+                <div class="promo-details">
+                    <p id="promo-details2">Buy any large-sized pizza</p>
+                    <p id="promo-details3">only on 11-15 December 2023</p>
+                    <p id="promo-details4">10 am - 3 pm</p>
+                </div>
+                <div>
+                    <button id="promobtn"><a href="../page/menu.html"> Click Here</a></button>
+                </div>
+                <div class="promo-notice">
+                  <p id="promo-notice1">*Terms and Conditions apply. Only available at Kingzza22 RevoU </p>
+                  <p id="promo-notice2">6% SST is included for every purchase</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--            nav header here         -->
+    <nav>
+        <div class="navbar" >
+            <div id="navlogo"><a href="./index.html"><img src="./assets/icon/Kingzza22.png" alt="logo"></a></div>
+            <div id="navlistbox">
+                <div class="dropdown">
+                    <button class="dropbtn"><a href="./index.html"><i class="fa-solid fa-house"></i> HOME</a></button>
+                </div>
+                  <div class="dropdown">
+                      <button class="dropbtn"><a href="./page/menu.html"><i class="fa-solid fa-bowl-food"></i> OUR MENU</a></button>
+                      <div class="dropdown-content">
+                        <a href="./page/menu.html#icedrinks"><i class="fa-solid fa-burger fa-beat-fade"></i> All Drinks</a>
+                        <a href="./page/menu.html#cart"><i class="fa-solid fa-cart-arrow-down fa-beat-fade"></i> Shopping</a>
+                      </div>
+                  </div>
+                  <div class="dropdown">
+                      <button class="dropbtn"><a href="./page/news.html"><i class="fa-regular fa-bookmark"></i> NEWS</a></button>
+                      <div class="dropdown-content">
+                        <a href="./page/news.html#firsFold"><i class="fa-solid fa-calendar-days fa-beat-fade"></i> Events</a>
+                        <a href="./page/news.html#Onesec"><i class="fa-solid fa-circle-dollar-to-slot fa-beat-fade"></i> Donation</a>
+                          </div>
+                  </div>
+                  <div class="dropdown">
+                      <button class="dropbtn"><a href="./page/about.html"><i class="fa-regular fa-user"></i> ABOUT US</a></button>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn" id="NavmyaccountBtn">My Account</button>
+                    <div class="dropdown-content">
+                        <a href="./page/login.html" onclick="document.getElementById('myModal').style.display='block'"><i class="fa-solid fa-arrow-right-from-bracket fa-flip"></i> Login</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!--        maps section here       -->
+    <div class="contact-us" id="map">
+        <div id="countdown">
+        <div id="map">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d253840.478949799!2d106.829518!3d-6.2297465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f3e945e34b9d%3A0x5371bf0fdad786a2!2sJakarta%2C%20Daerah%20Khusus%20Ibukota%20Jakarta!5e0!3m2!1sid!2sid!4v1700468762920!5m2!1sid!2sid" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+        </div>
+        </div>   
+    </div>
+    <!--        footer section here       -->
+    <footer>
+        <div id="footMain">
+                <div id="footleft">
+                    <div id="footleftUpper">
+                        <p><i>Go</i> <u>check</u> our</p>
+                        <p>amazing <i>menu !</i></p>
+                        <button type="button" class="basicbtn"><a href="../page/feedback.html">Send Feedback</a></button>
+                    </div>
+                    <div id="footleftLower">
+                        <p>&#169; 2023-2024 Kingzza22. All rights reserved.</p>
+                    </div>
+                </div>
+                <div id="footright">
+                    <div id="footrightUpper">
+                        <div id="footrightUpperLeft">
+                            <p class="anchorBtm">PROFILE</p>
+                            <div class="anchorBox">
+                            <ul class="footerLink">
+                                <li><a href="./page/about.html#creators">About Us</a></li>
+                            </ul>
+                            </div>
+                        </div>
+                        <div id="footrightUpperLeft">
+                            <p class="anchorBtm">NEWS</p>
+                            <div class="anchorBox">
+                            <ul class="footerLink">
+                                <li><a href="./page/news.html">Update</a></li>
+                            </ul>
+                            </div>
+                        </div>
+
+                        <div id="footrightUpperMid">
+                            <p class="anchorBtm">HOME</p>
+                            <div class="anchorBox">
+                                <ul class="footerLink">
+                                    <li><a href="#firstFold_right">Welcome</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div id="footrightUpperRight">
+                            <p class="anchorBtm" id="footMenu">MENU</p>
+                            <div class="anchorBox">
+                            <ul class="footerLink">
+                                <li><a href="./page/menu.html#slideup">All Menu</a></li>
+                                <li><a href="./page/menu.html#cart">Shopping</a></li>
+                            </ul>
+                            </div>
+                            <ul id=footSocmed>
+                                <li><a href="https://github.com/orgs/Kampus-Merdeka-Software-Engineering/teams/section-jakarta-group-22"><img src="./assets/icon/Github.png" id="Icongh" alt="ig_icon"></a></li>
+                                <li><a href=""><img src="./assets/icon/email.png" id="Iconml" alt="fb_icon"></a></li>
+                                <li><a href="#"><img src="./assets/icon/twitter.png" id="IconTw" alt="tw_icon"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </footer>
+</body>
+</html>

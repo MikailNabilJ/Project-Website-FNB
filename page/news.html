@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Kingzza22</title>
+    <link rel="icon" href="../assets/icon/Kingzza22.png">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <script src="../assets/js/page.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  </head>
+  <body>
+    <!--            nav header here         -->
+    <nav>
+        <div class="navbar">
+            <div id="navlogo"><a href="../index.html"><img src="../assets/icon/Kingzza22.png" alt="logo"></a></div>
+            <div id="navlistbox">
+                <div class="dropdown">
+                    <button class="dropbtn"><a href="../index.html"><i class="fa-solid fa-house"></i> HOME</a></button>
+                </div> 
+                  <div class="dropdown">
+                      <button class="dropbtn"><a href="../page/menu.html"><i class="fa-solid fa-bowl-food"></i> OUR MENU</a></button>
+                      <div class="dropdown-content">
+                        <a href="../page/menu.html#icedrinks"><i class="fa-solid fa-burger fa-beat-fade"></i> All Drinks</a>
+                        <a href="../page/menu.html#cart"><i class="fa-solid fa-cart-arrow-down fa-beat-fade"></i> Shopping</a>
+                      </div>
+                  </div>
+                  <div class="dropdown">
+                      <button class="dropbtn"><a href="../page/news.html"><i class="fa-regular fa-bookmark"></i> NEWS</a></button>
+                      <div class="dropdown-content">
+                        <a href="#firsFold"><i class="fa-solid fa-calendar-days fa-beat-fade"></i> Events</a>
+                        <a href="#Onesec"><i class="fa-solid fa-circle-dollar-to-slot fa-beat-fade"></i> Donation</a>
+                          </div>
+                  </div>
+                  <div class="dropdown">
+                      <button class="dropbtn"><a href="../page/about.html"><i class="fa-regular fa-user"></i> ABOUT US</a></button>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn" id="NavmyaccountBtn">My Account</button>
+                    <div class="dropdown-content">
+                        <a href="../page/login.html" onclick="document.getElementById('myModal').style.display='block'"><i class="fa-solid fa-arrow-right-from-bracket fa-flip"></i> Login</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+   <!-- Slideshow container -->
+    <div class="firsFold">
+        <div id="firsFoldSmaller">
+            <div class="slideshow-container" onclick="plusSlides(1)">
+
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+                <img src="../assets/pictures/cafepic3.png" style="width:100%;" alt="cafepic">
+            </div>
+            <div class="mySlides fade">
+                <img src="../assets/pictures/Pizzanews.png" style="width:100%;  height: 50%" alt="latte2">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="../assets/pictures/burgertempe.png" style="width:100%; height: 50%" alt="latte">
+            </div>
+        </div>
+    </div>
+
+
+<!-- News -->
+<div class="alert">
+<div class="alertLeft">
+<div class="leftcontent">
+  <div class="Ltext">
+  <h1>One Voice for Palestine: Life, Peace, Justice! </h1>
+  </div>
+  <div class="heading3">
+    <h1>#FreePalestine</h1>
+  </div>
+  <div class="message">
+    <p>Kingzza22 Cares for Palestine 10% of our weekly sales are allocated to help our brothers and sisters in Palestine. 
+        <br>Kingzza22 collaborates with Baznas to distribute donations for Palestine. </p>
+    <h2><a href="https://www.detik.com/tag/palestina">Click here for the latest news</a></h2>
+  </div>
+
+  </div>
+  </div>
+  <div class="alertRight">
+    <img src="../assets/pictures/news.webp"  id="newsimage">
+  </div>
+</div>
+<!--            1nd fold        -->
+<div class="section-1" id="Onesec">
+    <div class="Donations" id="thirdHeadingsN">
+        <h1 class="News">
+            <span class="text-wrapper">
+                <span class="lettersN">Kingzza22  #FreePalestine</span>
+            </span>
+        </h1>
+        <div id="TextSec-1">
+            <p>DONATIONS NOW</p>
+        </div>
+        <div id="TextSec-2">
+            <p>BNI: 00256789654<br><strong>BRI: 00256789654 </strong>  <br><strong>BSI: 56438901</strong></p>
+        </div>
+        <div id="btnNews">
+            <!-- <button class="basicnews" id="browseNewsBtn" onclick="toggleDropdown()">Our Donation</button> -->
+            <div id="dropdown" class="Newsdrop">
+                <form id="formNews">
+                    <label for="name">Name :</label>
+                    <input type="text" id="name" name="name" required>
+                    <br>
+                    <label for="total_price">Amount :</label>
+                    <input type="number" id="total_price" name="total_price" required>
+                    <br>
+                    <label for="message">Message :</label>
+                    <input type="text" id="message2" name="message" required>
+                    <label for="options">Category :</label>
+                    <select id="options" name="options">
+                        <option value="BSI" id="category">BSI</option>
+                        <option value="BRI" id="category">BRI</option>
+                        <option value="BNI" id="category">BNI</option>
+                    </select>
+                    <br>
+                    <button type="submit" class="basicnews" onclick="printDona()">Submit</button>
+                </form>
+            </div>
+                <script>
+                    var slideIndex = 1;
+                    showSlides(slideIndex);
+
+                    // Next/previous controls
+                    function plusSlides(n) {
+                    showSlides(slideIndex += n);
+                    }
+
+                    function showSlides(n) {
+                    var i;
+                    var slides = document.getElementsByClassName("mySlides");
+                    var dots = document.getElementsByClassName("dot");
+                    if (n > slides.length) {slideIndex = 1}
+                    if (n < 1) {slideIndex = slides.length}
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                    }
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                    }
+                    slides[slideIndex-1].style.display = "block";
+                    dots[slideIndex-1].className += " active";
+                    }
+    
+                    // async function printDona() {
+                    //     var name = document.getElementById("name").value;
+                    //     var total_price = document.getElementById("total_price").value;
+                    //     var options = document.getElementById("options").value;
+                    //     var message = document.getElementById("message2").value;
+                    //     if (name == "" || total_price == "" || options == "") {
+                    //         alert("Please make sure to fill in all the required fields.");
+                    //     } else {
+                    //         alert("Dear " + name + ", your donation of " + total_price +"!");
+                    //         await fetch('http://localhost:5000/donations', {
+                    //             method: 'POST',
+                    //             headers: {
+                    //                 'Content-Type': 'application/json'
+                    //             },
+                    //             body: JSON.stringify({ name, total_price, options, message })
+                    //         });
+                    //         await fetch('http://localhost:5000/donations/${id}', {
+                    //             method: 'DELETE',
+                    //             }).
+                    //             then(response => response.json())
+                    //                 .then(data => {
+                    //                 console.log('Feedback deleted successfully:', data);
+                    //                 // Handle success, e.g., show a success message to the user
+                    //                 })
+                    //                 .catch(error => {
+                    //                 console.error('Error deleting feedback:', error);
+                    //                 // Handle error, e.g., show an error message to the user
+                    //         });
+                    //     }
+                    // }
+                </script>
+        </div>
+    </div>
+
+</div>
+<!--            2nd fold        -->
+<div class="section" id="secondSec">
+    <div id="secondSecL">
+        <div class="decotext" id="secondSecL_Content">
+            <div class="headings1" id="secondHeadings">
+                <div><img src="../assets/pictures/support.png" width="100" height="100" id="PL"></div>
+                <div id="GreenHeadingTxt"><p>Let's Go</p></div>
+            </div>
+            <div id="GreenpicBox">
+                <div class="square-picbox" id="photo1">
+                </div>
+                <div class="square-picbox" id="photo2">
+                </div>
+                <div class="square-picbox" id="photo3">
+                </div>
+                <div class="square-picbox" id="photo4">
+                </div>
+            </div>
+            <div id="SecL_text1">
+                <p>A bite of breakfast, Palestine's hope</i></p>
+            </div>
+            <div id="SecL_text2">
+                <p>more than just a delicious dish we offer <b>HOPE</b>.Every bribe is a small step in supporting Palestine. Let us together contribute to peace and justice.</p>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+    <!--        footer section here       -->
+    <footer>
+        <div id="footMain">
+                <div id="footleft">
+                    <div id="footleftUpper">
+                        <p><i>We</i> <u>want</u> to hear</p>
+                        <p>from <i>you !</i></p>
+                        <button type="button" class="basicbtn"><a href="../page/feedback.html">Send Feedback</a></button>
+                    </div>
+                    <div id="footleftLower">
+                        <p>&#169; 2023-2024 Kingzza22. All rights reserved.</p>
+                    </div>
+                </div>
+                <div id="footright">
+                    <div id="footrightUpper">
+                        <div id="footrightUpperLeft">
+                            <p class="anchorBtm">ABOUT US</p>
+                            <div class="anchorBox">
+                            <ul class="footerLink">
+                                <li><a href="../page/about.html">About</a></li>
+                            </ul>
+                            </div>
+                        </div>
+                        <div id="footrightUpperMid">
+                            <p class="anchorBtm">HOME</p>
+                            <div class="anchorBox">
+                                <ul class="footerLink">
+                                    <li><a href="../index.html">Welcome</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div id="footrightUpperRight">
+                            <p class="anchorBtm" id="footMenu">MENU</p>
+                            <div class="anchorBox">
+                            <ul class="footerLink">
+                                <li><a href="../page/menu.html#icedrinks">All Drinks</a></li>
+                                <li><a href="../page/menu.html#food">Food</a></li>
+                                <li><a href="../page/menu.html#cart">Shopping</a></li>
+                            </ul>
+                            </div>
+                            <ul id=footSocmed>
+                                <li><a href="https://github.com/orgs/Kampus-Merdeka-Software-Engineering/teams/section-jakarta-group-22"><img src="../assets/icon/Github.png" id="Icongh" alt="ig_icon"></a></li>
+                                <li><a href=""><img src="../assets/icon/email.png" id="Iconml" alt="fb_icon"></a></li>
+                                <li><a href="#"><img src="../assets/icon/twitter.png" id="IconTw" alt="tw_icon"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </footer>
+  </body>
+</html>

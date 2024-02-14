@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant Kingzza22</title>
+  <link rel="icon" href="../assets/icon/Kingzza22.png">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script src="../assets/js/page.js"></script>
+  <!-- <script src="../assets/js/modules/feedback.js"></script> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js">
+
+</head>
+
+<body>
+     <!--            nav header here         -->
+      <nav>
+        <div class="navbarFeed">
+          <div id="navlogo"><a href="../index.html"><img src="../assets/icon/Kingzza22.png" alt="logo"></a></div>
+          <div id="navlistbox">
+              
+              <div class="dropdown">
+                  <button class="dropbtn"><a href="../index.html"><i class="fa-solid fa-house"></i> HOME</a></button>
+              </div>
+                <div class="dropdown">
+                    <button class="dropbtn"><a href="../page/menu.html"><i class="fa-solid fa-bowl-food"></i> OUR MENU</a></button>
+                    <div class="dropdown-content">
+                      <a href="../page/menu.html#icedrinks"><i class="fa-solid fa-burger fa-beat-fade"></i> All Drinks</a>
+                      <a href="../page/menu.html#cart"><i class="fa-solid fa-cart-arrow-down fa-beat-fade"></i> Shopping</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn"><a href="../page/news.html"><i class="fa-regular fa-bookmark"></i> NEWS</a></button>
+                    <div class="dropdown-content">
+                      <a href="../page/news.html#firsFold"><i class="fa-solid fa-calendar-days fa-beat-fade"></i> Events</a>
+                      <a href="../page/news.html#Onesec"><i class="fa-solid fa-circle-dollar-to-slot fa-beat-fade"></i> Donation</a>
+                      </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn"><a href="../page/about.html"><i class="fa-regular fa-user"></i> ABOUT US</a></button>
+              </div>
+              <div class="dropdown">
+                  <button class="dropbtn" id="NavmyaccountBtn">My Account</button>
+                  <div class="dropdown-content">
+                      <a href="../page/login.html" onclick="document.getElementById('myModal').style.display='block'"><i class="fa-solid fa-arrow-right-from-bracket fa-flip"></i> Login</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+      </nav>
+      
+      <div class="contentSec">
+       <div class="content-img">
+        <h4 class="wordCarousel">
+           <span> Enjoy The Bread and Stay</span>
+           <div>
+             <ul class="flip4">
+                <li>CHILL</li>
+                <li>AESTHETIC</li>
+               <li>EXOTIC</li>
+               <li>COOL</li>
+
+             </ul>
+           </div>
+        </h4>
+       </div>
+
+        <div class="contentDetails">
+          <div class="feedbackSec">
+            <h3 id=sub-text> TELL US SOMETHING</h3>
+            <p id=sub-text2>Feel free to leave your message in the details below: </p>
+            <form class="form" id="form" name="myForm" action="../page/feedback.html" onsubmit="return validateForm()">
+                <input class="username" id="username" type="text" name="fname" placeholder="Username" required>
+                <input id="email" type="text" name="email" placeholder="Email Address" required><br>
+                <label for="category">Choose the feedback category</label>
+                <select class="category" id="category" name="category">
+                  <option value="Suggestion">Suggestion</option>
+                  <option value="Appreciation">Appreciation</option>
+                  <option value="Food & Beverages">Food & Beverages</option>
+                  <option value="Others">Others</option>
+                </select><br>
+                <textarea class="message" id="message" name="message" rows="10" placeholder="Please fill in your feedback here" required></textarea>
+                <p id=sub-text2>Terms and Conditions </p>
+                <input class="checkbox" id="checkbox" type="checkbox" name="check" value="0" required>
+                <label for="checkbox" class="cb-label">By checking this box I understand and agree that :</label><br>
+                <p class="sub-text3" id="rule1">1. Kingzza22 has sole direction whether to acknowledge or pay me <br>
+                for my submission. </p>
+                <p class="sub-text3" id="rule2">2. Kingzza22 may contact me via the email address above <br> to follow
+                up on my submission. </p>
+
+              <input class="basicbtn" type="submit" name="submit" value="Submit my feedback" onclick="return validateAll(myForm)">
+            </form>
+          </div>
+         
+          <div class="mailingSec">
+           <h3 id=sub-text> STILL NEED HELP? </h3>
+           <p id=sub-text2> Contact Us Directly : </p>
+           <div class="mailingAdd">
+              <p id="sub-text4">Email Address : restaurantkingzza@gmail.com <br>
+                 Contact number : +62-8505-1622-7569 <br></p>
+
+                 <div class="bfr-footer">
+                 </div>
+           </div>
+          </div>
+        </div>
+      </div>
+
+       
+       <!--        footer section here       -->
+      <footer>
+        <div id="footMain">
+                <div id="footleft">
+                    <div id="footleftUpper">
+                        <p><i>Go</i> <u>check</u> our</p>
+                        <p>amazing <i>menu !</i></p>
+                    </div>
+                    <div id="footleftLower">
+                        <p>&#169; 2023-2024 Restaurant Kingzza22. All rights reserved.</p>
+                    </div>
+                </div>
+                <div id="footright">
+                    <div id="footrightUpper">
+                        <div id="footrightUpperLeft">
+                            <p class="anchorBtm">ABOUT US</p>
+                            <div class="anchorBox">
+                            <ul class="footerLink">
+                                <li><a href="../page/about.html">About</a></li>
+                            </ul>
+                            </div>
+                        </div>
+                        <div id="footrightUppermid">
+                            <p class="anchorbtm">NEWS</p>
+                            <div class="anchorbox">
+                                <ul class="footerLink">
+                                    <li><a href="../page/news.html#firsFold">Events</a></li>
+                                    <li><a href="../page/news.html#Onesec">Charity</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div id="footrightUpperRight">
+                            <p class="anchorBtm" id="footMenu">MENU</p>
+                            <div class="anchorBox">
+                            <ul class="footernews">
+                                <li><a href="../page/menu.html#icedrinks">All Drinks</a></li>
+                                <li><a href="../page/menu.html#food">Food</a></li>
+                                <li><a href="../page/menu.html#cart">Shopping</a></li>
+                            </ul>
+                            </div>
+                            <ul id=footSocmed>
+                                <li><a href="https://github.com/orgs/Kampus-Merdeka-Software-Engineering/teams/section-jakarta-group-22"><img src="../assets/icon/Github.png" id="Icongh" alt="ig_icon"></a></li>
+                                <li><a href=""><img src="../assets/icon/email.png" id="Iconml" alt="fb_icon"></a></li>
+                                <li><a href="#"><img src="../assets/icon/twitter.png" id="IconTw" alt="tw_icon"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+        </div>
+      </footer>
+
+      <script>
+       document.getElementById('form').addEventListener('submit', function(event) {
+          event.preventDefault();
+          const formData = {
+            username: document.getElementById('username').value,
+            email: document.getElementById('email').value,
+            category: document.getElementById('category').value,
+            message: document.getElementById('message').value,
+            
+          };
+          fetch('http://localhost:5000/feedbacks', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData),
+          })
+          .then(response => response.json())
+          .then(data => {
+            console.log('Feedback submitted successfully:', data);
+            // Handle success, e.g., show a success message to the user
+          })
+          .catch(error => {
+            console.error('Error submitting feedback:', error);
+            // Handle error, e.g., show an error message to the user
+          });
+        });
+
+        fetch('http://localhost:5000/feedbacks/${id}', {
+          method: 'DELETE',
+        })
+            .then(response => response.json())
+            .then(data => {
+              console.log('Feedback deleted successfully:', data);
+              // Handle success, e.g., show a success message to the user
+            })
+            .catch(error => {
+              console.error('Error deleting feedback:', error);
+              // Handle error, e.g., show an error message to the user
+            });
+      </script>
+</body>
+
+</html>

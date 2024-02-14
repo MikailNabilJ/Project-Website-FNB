@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Restaurant Kingzza22</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script src="../assets/js/page.js"></script>
+  <script src="../assets/js/modules/products.js"></script>
+  <link rel="icon" href="../assets/icon/Kingzza22.png">
+  <link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+  <header>
+    <div class="containermenu">
+      <video autoplay muted loop>
+        <source src="../assets/video/bgvideo.mp4" type="video/mp4" id="bg">
+      </video>
+      <h1 id="text" class="Vidmenu"> Better FOOD <br> Better LIFE <br></h1>
+    </div>
+  </header>
+  
+  <!-- NAV BAR -->
+  <nav>
+    <div class="navbar">
+        <div id="navlogo"><a href="../index.html"><img src="../assets/icon/Kingzza22.png" alt="logo"></a></div>
+        <div id="navlistbox">
+            <div class="dropdown">
+                <button class="dropbtn"><a href="../index.html"><i class="fa-solid fa-house"></i> HOME</a></button>
+            </div>
+              <div class="dropdown">
+                  <button class="dropbtn"><a href="../page/menu.html"><i class="fa-solid fa-bowl-food"></i> OUR MENU</a></button>
+                  <div class="dropdown-content">
+                    <a href="#icedrinks"><i class="fa-solid fa-burger fa-beat-fade"></i> All Drinks</a>
+                    <a href="#cart"><i class="fa-solid fa-cart-arrow-down fa-beat-fade"></i> Shopping Cart</a>
+                  </div>
+              </div>
+              <div class="dropdown">
+                  <button class="dropbtn"><a href="../page/news.html"> <i class="fa-regular fa-bookmark"></i> NEWS</a></button>
+                  <div class="dropdown-content">
+                    <a href="../page/news.html#firsFold"><i class="fa-solid fa-calendar-days fa-beat-fade"></i> Events</a>
+                    <a href="../page/news.html#Onesec"><i class="fa-solid fa-circle-dollar-to-slot fa-beat-fade"></i> Donation</a>
+                  </div>
+              </div>
+              <div class="dropdown">
+                  <button class="dropbtn"><a href="../page/about.html"><i class="fa-regular fa-user"></i> ABOUT US</a></button>
+              </div>
+              <div class="dropdown">
+                <button class="dropbtn" id="NavmyaccountBtn"><i class="fa-solid fa-circle-user"></i> My Account</button>
+                <div class="dropdown-content">
+                    <a href="../page/login.html" onclick="document.getElementById('myModal').style.display='block'"><i class="fa-solid fa-arrow-right-from-bracket fa-flip"></i> Login</a>
+                </div>
+              </div>
+        </div>
+    </div>
+  </nav>
+  
+    <div class="slideup">  
+    <div class="menu-C">
+        <div class="search-container">
+          <input type="text" class="search-box" id="searchInput" placeholder="Cari menu makanan...">
+            <button class="search-button" onclick="searchMenu()">Cari</button>
+        </div>
+    </div>
+    </div>
+        <!--Drinks-->
+      <div class="slideup">
+        <div class="icedrinks">
+          <div class="menu-list">
+            <h1 class="menu-h1">All Drinks</h1>
+              <div id="product-container">
+               <!-- Database -->
+              </div>
+          </div>
+        </div>
+        <!-- FOOD -->
+        <div id="food">
+          <div class="menu-list">
+            <h1 class="menu-h1">Food</h1>
+              <div id="product-container">
+                <div class="menu-item">
+                      <img src="../assets/menu/Burger.png" alt="Food 1" id="image">
+                      <h3 class="productName">Gourmet Burger Experience</h3>
+                      <p class="descMenu">Discover an unforgettable burger experience with high-quality meat and special sauces that tantalize the palate.</p>
+                      $<span class="productPrice">70</p>
+                      <button onclick="addChart('Burger',70)" id="button"> <i class="fa-solid fa-cart-plus"></i> Add Chart</button>
+                </div>
+                <div class="menu-item">
+                        <img src="../assets/menu/hawaipizza.png" alt="Food 2" id="image">
+                        <h3 class="productName">Hawaiian Pizza</h3>
+                        <p class="descMenu">Hawaiian pizza is a type of pizza that is topped with tomato sauce, cheese, ham, and pineapple.</p>
+                        $<span class="productPrice">100</p>
+                        <button onclick="addChart('Hawaiian Pizza',100)" id="button"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                </div>
+              </div>
+          </div>
+        </div>
+          <div class="cart-container" id="cart">
+            <h2 class="menu-h1">Shopping Cart</h2>
+            <table id="cartTable">
+              <thead>
+                <tr>
+                  <th>Item</th>
+                  <th>Price</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="cartBody">
+                <!-- Cart items will be dynamically added here -->
+              </tbody>
+              <tr>
+                  <th colspan="2">Total + ppn 10% </th>
+                  <th id="totalPriceAfterTax">$0.00</th>
+              </tr>
+            </table>
+            <button onclick="checkout()" class="btnmenu"><i class="fa-solid fa-list-check"></i> Checkout</button>
+            <button onclick="hapus()" class="btnmenu"><i class="fa-solid fa-trash"></i> Delete All</button>
+          </div>
+      </div>
+
+      <!-- FOOTER  -->
+              <footer>
+                <div id="footMain">
+                  <div id="footleft">
+                    <div id="footleftUpper">
+                        <p><i>Go</i> <u>check</u> our</p>
+                        <p>amazing <i>menu !</i></p>
+                        <button type="button" class="basicbtn"><a href="../page/feedback.html">Send Feedback</a></button>
+                    </div>
+                    <div id="footleftLower">
+                        <p>&#169; 2023-2024 Kingzza22. All rights reserved.</p>
+                    </div>
+                  </div>
+                    <div id="footright">
+                      <div id="footrightUpper">
+                        <div id="footrightUpperLeft">
+                            <p class="anchorBtm">PROFILE</p>
+                            <div class="anchorBox">
+                            <ul class="footerLink">
+                                <li><a href="../page/about.html#creators">About Us</a></li>
+                            </ul>
+                            </div>
+                        </div>
+
+                        <div id="footrightUpperLeft">
+                            <p class="anchorBtm">NEWS</p>
+                            <div class="anchorBox">
+                            <ul class="footerLink">
+                                <li><a href="../page/news.html">Update</a></li>
+                            </ul>
+                            </div>
+                        </div>
+
+                        <div id="footrightUpperMid">
+                            <p class="anchorBtm">HOME</p>
+                            <div class="anchorBox">
+                                <ul class="footerLink">
+                                    <li><a href="#Home1_frame">Welcome</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div id="footrightUpperRight">
+                            <p class="anchorBtm" id="footMenu">MENU</p>
+                            <div class="anchorBox">
+                            <ul class="footerLink">
+                                <li><a href="../page/menu.html#slideup">All Menu</a></li>
+                                <li><a href="../page/menu.html#cart">Shopping</a></li>
+                            </ul>
+                            </div>
+                            <ul id=footSocmed>
+                                <li><a href="https://github.com/orgs/Kampus-Merdeka-Software-Engineering/teams/section-jakarta-group-22"><img src="../assets/icon/Github.png" id="Icongh" alt="ig_icon"></a></li>
+                                <li><a href=""><img src="../assets/icon/email.png" id="Iconml" alt="fb_icon"></a></li>
+                                <li><a href="#"><img src="../assets/icon/twitter.png" id="IconTw" alt="tw_icon"></a></li>
+                            </ul>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+              </footer>
+</body>
+
+</html>
